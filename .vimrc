@@ -1,35 +1,11 @@
-"Setting
-set backspace=indent,eol,start
-filetype plugin indent on
 
-syntax on
 
-set nowrap
 
-set hlsearch
-set ignorecase
-set smartcase
-
-set autoindent
-
-set number
-set list
-set wildmenu
-set showcmd
-
-set shiftwidth=2
-set softtabstop=2
-set expandtab
-set tabstop=2
-set smarttab
-
-set clipboard=unnamed
-"ペーストモードに設定
-set paste
-
-""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""
 " 各種オプションの設定
 """"""""""""""""""""""""""""""
+"ペーストモードに設定
+set paste
 " タグファイルの指定(でもタグジャンプは使ったことがない)
 set tags=~/.tags
 " スワップファイルは使わない(ときどき面倒な警告が出るだけで役に立ったことがない)
