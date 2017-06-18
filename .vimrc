@@ -27,6 +27,10 @@ endif
 call dein#add('Shougo/dein.vim')
 call dein#add('Shougo/neocomplcache.vim')
 call dein#add('Shougo/neocomplcache-rsense.vim')
+"rubocop
+call dein#add('scrooloose/syntastic')
+
+call dein#add('scrooloose/nerdtree')
 
 " neocomplcacheの設定
 " Disable AutoComplPop.
@@ -45,7 +49,6 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 let g:neocomplcache_enable_camel_case_completion = 1
 let g:neocomplcache_enable_underbar_completion = 1
 
-
 " Rsense用の設定
 if !exists('g:neocomplcache_omni_patterns')
     let g:neocomplcache_omni_patterns = {}
@@ -57,7 +60,30 @@ autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 let g:rsenseHome = expand("~/.rbenv/shims/rsense")
 let g:rsenseUseOmniFunc = 1
 
+" *******************************************************
+" syntastic
+" *******************************************************
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_scss_checkers = ['scss_lint']
+
+" *******************************************************
+" NERDTree
+" *******************************************************
+let g:NERDTreeShowBookmarks=1
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+autocmd vimenter * NERDTree
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable  = '▶'
+let g:NERDTreeDirArrowCollapsible = '▼'
 
 "vimの基本設定
 
