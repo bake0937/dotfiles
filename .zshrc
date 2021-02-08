@@ -98,3 +98,6 @@ bindkey '^R' anyframe-widget-execute-history
 bindkey '^G' anyframe-widget-cd-ghq-repository
 # End anyframe
 
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
+eval "$(anyenv init -)"
