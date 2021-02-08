@@ -79,6 +79,7 @@ zinit light paulirish/git-open
 
 # anyframeのセットアップ
 zinit light mollifier/anyframe
+
 # Ctrl+B
 # peco でディレクトリの移動履歴を表示
 bindkey '^B' anyframe-widget-cdr
@@ -86,8 +87,8 @@ autoload -Uz chpwd_recent_dirs cdr add-zsh-hook
 add-zsh-hook chpwd chpwd_recent_dirs
 
 # Ctrl+R
-# peco でコマンドの実行履歴を表示
-bindkey '^R' anyframe-widget-execute-history
+# peco でコマンドの実行履歴から選んでコマンドラインに挿入
+bindkey '^R' anyframe-widget-put-history
 
 # Ctrl+B
 # peco でGitブランチを表示して切替え
